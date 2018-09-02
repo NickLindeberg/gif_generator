@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'user sees all categories' do
   describe 'they visit /categories' do
-    it 'displays all articles' do
+    it 'displays all categories' do
       category_1, category_2 = create_list(:category, 2)
 
       visit categories_path
