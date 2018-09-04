@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
   validates_presence_of :title
-  has_many :categories
+  has_many :gifs
 
 end

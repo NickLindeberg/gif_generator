@@ -46,6 +46,11 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
+# Giphy::Configuration.configure do |config|
+#   config.version = THE_API_VERSION
+#   config.api_key = YOUR_API_KEY
+# end
+
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
