@@ -3,9 +3,8 @@
 <h2>
 <% @gifs.each do |gif| %>
   <ul>
+    <li><%= gif.category.title %></li>
     <img class="image" src="<%= gif.image %>">
   </ul>
 <% end %>
 </h2>
-
-<img src="https://gifer.com/i/56tk.gif">
