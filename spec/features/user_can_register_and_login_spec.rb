@@ -25,7 +25,7 @@ describe 'registration and login' do
 
       visit root_path
 
-      click_on 'Sign up to be a new user'
+      click_link 'Sign up to be a new user'
 
       expect(current_path).to eq(new_user_path)
 
@@ -51,7 +51,7 @@ describe 'registration and login' do
       fill_in :username, with: user.username
       fill_in :password, with: user.password
 
-      click_on 'Log in'
+      click_on 'Log In'
 
       expect(current_path).to eq(user_path(user))
       expect(page).to have_content("Welcome, #{user.username}")
@@ -68,7 +68,7 @@ save_and_open_page
       fill_in :username, with: user.username
       fill_in :password, with: 'bad password'
 
-      click_on 'Log in'
+      click_on 'Log In'
 
       expect(current_path).to eq(login_path)
       expect(page).to_not have_content("Welcome, #{user.username}")
@@ -81,7 +81,7 @@ save_and_open_page
       visit login_path
       fill_in :username, with: user.username
       fill_in :password, with: user.password
-      click_on 'Log in'
+      click_on 'Log In'
       expect(page).to_not have_content('I already have an account')
 
       click_on 'Log out'

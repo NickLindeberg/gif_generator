@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'user can create categories' do
   describe 'they visit /categories' do
-    xit 'creates new category' do
+    it 'creates new category' do
 
       visit categories_path
 
