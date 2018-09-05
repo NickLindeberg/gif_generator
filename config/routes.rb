@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :categories
   resources :gifs, only: [:index]
+  resources :users, only: [:new, :create, :show]
+
 
   root 'gifs#index'
 
