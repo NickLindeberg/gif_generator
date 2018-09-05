@@ -7,5 +7,4 @@ class GifsController < ApplicationController
   def new
     @category = Category.new
   end
-
 end
