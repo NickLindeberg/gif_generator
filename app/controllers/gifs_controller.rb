@@ -1,7 +1,7 @@
 class GifsController < ApplicationController
 
   def index
-    @gifs = Gif.all
+    @gifs = Gif.joins(:category).order('categories.title')
   end
 
   def new
