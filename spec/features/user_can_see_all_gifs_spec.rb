@@ -9,7 +9,7 @@ describe 'user sees all gifs' do
       gif_1 = category_2.gifs.create(image: 'https://media.giphy.com/media/v9OLgAL8p8FOM/source.gif')
 
       visit gifs_path
-save_and_open_page
+
       expect(page).to have_content(category_1.title)
       expect(page).to have_content(category_1.title)
     end
