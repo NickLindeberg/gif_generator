@@ -62,7 +62,7 @@ describe 'registration and login' do
       visit root_path
 
       click_on 'I already have an account'
-save_and_open_page
+
       expect(current_path).to eq(login_path)
 
       fill_in :username, with: user.username
