@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap 4 Website Example</title>
+  <title>GifGenerator IS RAD</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -11,26 +11,39 @@
   <style>
   body {
       background: #97ABB1;
-      font-color
   }
+  h2 {
+    text-align: center;
+  }
+
+
+
   </style>
+
 </head>
 <body>
 
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a class="navbar-brand" href="/gifs">GifGenerator</a>
+    <a class="navbar-brand" href="/">GifGenerator</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href='/categories'>Categories</a>
+          <% if current_user %>
+            <li class="nav-item">
+              <a class="nav-link" href='/categories'>Categories</a>
+            <li class="nav-item">
+              <a class="nav-link" href='/gifs'>Gifs</a>
+            <li class="nav-item">
+              <a class="nav-link" href='/logout'>Logout</a>
+          <% else %>
         <li class="nav-item">
           <a class="nav-link" href='/login'>I already have an account</a>
         <li class="nav-item">
           <a class="nav-link" href='/users/new'>Sign up to be a new user</a>
         </li>
+        <% end %>
       </ul>
     </div>
   </nav>

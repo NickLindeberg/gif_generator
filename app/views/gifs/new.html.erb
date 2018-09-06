@@ -1,0 +1,6 @@
+<%= form_for @gif do |f| %>
+  <%= f.label :image %>
+  <%= f.file_field :image, :class => 'fileupload' %>
+
+  <%= f.submit %>
+<% end %>
