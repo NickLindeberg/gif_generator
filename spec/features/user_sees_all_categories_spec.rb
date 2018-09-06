@@ -3,7 +3,8 @@ require 'rails_helper'
 describe 'user sees all categories' do
   describe 'they visit /categories' do
     it 'displays all articles' do
-      category_1, category_2 = create_list(:category, 2)
+      category_1 = Category.create(title: 'Sweet')
+      category_2 = Category.create(title: 'Dude')
 
       visit categories_path
 

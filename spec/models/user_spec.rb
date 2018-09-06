@@ -8,13 +8,13 @@ describe User, type: :model do
   end
 
   describe 'roles' do
-    xit 'can be created as an admin' do
+    it 'can be created as an admin' do
       user = User.create(username: "Ian", password: 'test123', role: 1)
 
       expect(user.role).to eq('admin')
       expect(user.admin?).to be_truthy
     end
-    xit 'can be created as default user' do
+    it 'can be created as default user' do
       user = User.create(username: "Rad", password: 'test123', role: 0)
 
       expect(user.role).to eq('default')
